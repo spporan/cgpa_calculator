@@ -323,7 +323,7 @@ class SgpaState extends State<SgpaCalculation> {
                   Padding(
                       padding: EdgeInsets.all(30.0),
                       child: Text(
-                        "Your SGPA is : $result",
+                        "Your SGPA  : $result",
                         style: TextStyle(fontSize: 25.0),
                       )),
                 ],
