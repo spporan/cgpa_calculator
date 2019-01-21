@@ -1,3 +1,4 @@
+import 'package:cgpa_calculator/screens/cgpa_calculation.dart';
 import 'package:cgpa_calculator/screens/sgpa_calculation.dart';
 import 'package:flutter/material.dart';
 import 'package:bubble_tab_indicator/bubble_tab_indicator.dart';
@@ -18,9 +19,10 @@ class _TabState extends State<TabScreen> {
       length: 2,
       child: Scaffold(
         appBar: AppBar(
+          centerTitle: true,
           title: Text(
-            "CGPA Calculator",
-            style: TextStyle(fontSize: 25.0),
+            "University CGPA",
+            style: TextStyle(fontSize: 25.0,fontWeight:FontWeight.bold),
           ),
           elevation: 15.0,
           bottom: TabBar(
@@ -34,15 +36,16 @@ class _TabState extends State<TabScreen> {
               isScrollable: true,
               tabs: [
                 Tab(
-                  text: 'Calculate SGPA',
+                  text: 'Semester SGPA',
                 ),
                 Tab(
-                  text: 'Calculate CGPA',
+                  text: 'Total  CGPA',
                 )
               ]),
         ),
         body: TabBarView(children: [
-          SgpaCalculation()
+          SgpaCalculation(),
+          CGPACalculation(),
 
         ]),
       ),
